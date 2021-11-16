@@ -3,12 +3,11 @@ import re
 from bs4 import BeautifulSoup
 import requests
 from unidecode import unidecode
+import sys
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.53'
 }
-
-
 
 with open('sources.json', 'r') as f:
     sources = json.load(f)
@@ -42,7 +41,6 @@ def cnn(url: str) -> dict:
     soup = BeautifulSoup(r.content, 'html.parser')
 
     articles = soup.find_all('article')
-    print(soup.text)
     for article in articles:
         link_wrapper = article.find('a') if article else None
         link = link_wrapper['href'] if link_wrapper else None
@@ -99,6 +97,12 @@ def call(endpoint: str = 'headlines', n_articles: int = 10) -> dict:
     return response
 
 
-response = call()
-with open('response.json', 'w') as f:
-    json.dump(response, f)
+# response = call()
+# with open('response.json', 'w') as f:
+#     json.dump(response, f)
+
+endpoint = str(sys.argv[1])
+n_articles = int(sys.argv[2])
+response = call(endpoint, n_articles)
+print(json.dumps(response, indent=4))
+sys.stdout.flush()
