@@ -1,0 +1,49 @@
+{
+    "headlines": [
+        "https://www.theguardian.com/us",
+        "https://www.nytimes.com/",
+        "https://www.usatoday.com/"
+    ],
+    "us": [
+        "https://www.theguardian.com/us",
+        "https://www.nytimes.com/section/us"
+    ],
+    "world": [
+        "https://www.theguardian.com/world",
+        "https://www.nytimes.com/section/world"
+    ],
+    "tech": [
+        "https://www.theguardian.com/us/technology",
+        "https://www.nytimes.com/section/technology"
+    ],
+    "science": [
+        "https://www.theguardian.com/science",
+        "https://www.nytimes.com/section/science"
+    ],
+    "business": [
+        "https://www.theguardian.com/us/business",
+        "https://www.nytimes.com/section/business"
+    ],
+    "entertainment": [
+        "https://www.theguardian.com/us/entertainment"
+    ],
+    "sports": [
+        "https://www.theguardian.com/us/sport",
+        "https://www.nytimes.com/section/sports"
+    ],
+    "politics": [
+        "https://www.theguardian.com/politics",
+        "https://www.nytimes.com/section/politics"
+    ],
+    "health": [
+        "https://www.theguardian.com/us/health",
+        "https://www.nytimes.com/section/health"
+    ],
+    "opinion": [
+        "https://www.theguardian.com/us/commentisfree",
+        "https://www.nytimes.com/section/opinion"
+    ],
+    "environment": [
+        "https://www.theguardian.com/environment"
+    ]
+}

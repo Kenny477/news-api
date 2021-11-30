@@ -1,0 +1,1 @@
+Compress-Archive -Force package/* lambda_package.zip
