@@ -53,13 +53,13 @@ class NewsScraper:
 
         for article in articles:
             link_wrapper = article.find('a') if article else None
-            link = link_wrapper['href'] if link_wrapper else None
+            link = link_wrapper['href'] if link_wrapper and link_wrapper.has_attr('href') else None
             title_wrapper = article.find('h3', {'color': 'primary'}) if article else None
             title = unidecode(title_wrapper.text.strip()) if title_wrapper else None
             description_wrapper = article.find('p') if article else None
             description = unidecode(description_wrapper.text.strip()) if description_wrapper else None
             img_wrapper = article.find('img') if article else None
-            img = img_wrapper['src'] if img_wrapper else None
+            img = img_wrapper['src'] if img_wrapper and img_wrapper.has_attr('src') else None
             if title and link:
                 res.append({
                     'title': title,
